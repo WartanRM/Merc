@@ -35,7 +35,7 @@ function Cards() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('https://localhost:7037/api/Gallery')
+        axios.get('https://f1backend.netlify.app/api/Gallery')
             .then(response => {
                 setCardData(response.data);
             })
