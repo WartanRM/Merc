@@ -172,7 +172,6 @@ button {
 .aboutt p {
   color: rgb(192, 136, 136);
 }
-
 /* News Slider */
 .news {
   display: flex;
@@ -183,27 +182,84 @@ button {
 .news-slider {
   position: relative;
   overflow: hidden;
-  width: 30%;
-  
-  height: 300px;
+  left:30%;
+  width: 100%;
+  max-width: 35%;
+  margin: 3%;
+  height: 350px;
 }
 
 .news-slider-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .news-slide {
-  min-width: 90%;
-  height: 300px;
+  min-width: 100%;
+  height: 350px;
   background-size: cover;
   background-position: center;
-  opacity: 0.7;
+  opacity: 0.8;
   display: flex;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
 }
 
-/* Card */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 00px;
+  font-size: 2rem;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-button.prev {
+  left: 5px;
+}
+
+.nav-button.next {
+  right: 5px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dots */
+.news-slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.news-slider-dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.news-slider-dot.active {
+  background-color: #0088FE;
+}
+
 .card {
   width: calc(100% / 3 - 20px);
   background-color: #4d3b3b;
@@ -242,35 +298,72 @@ button {
   padding: 0 5%;
   justify-content: center;
 }
-
 .Contact {
-  padding: 90px 5%;
+  min-height: 68vh;
+  width: 100vw;
+  padding: 7% 8%;
   display: flex;
   flex-direction: column;
   color: rgb(199, 147, 95);
 }
 
-.Contact input,
+.Contact input{
+  border: none;
+  background-color: #4d3b3b;
+  color: rgb(172, 128, 128);
+  width: 12%;
+  margin-bottom: 20px;
+}
 .Contact textarea {
   border: none;
   background-color: #4d3b3b;
   color: rgb(172, 128, 128);
-  width: 100%;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-area {
+  display: flex;
+  flex-direction: column; /* Change to column */
+  gap: 10px; /* Space between textarea and button */
 }
 
 .comment {
-  width: 100%;
   height: 170px;
 }
 
 .commentButton {
-  width: fit-content;
-  padding: 5px 7px;
-  background-color: black;
+  width: 5%;
+  padding: 5px 10px;
+  background-color: #4d3b3b;
   color: rgb(199, 147, 95);
-  margin-top: 15px;
-  margin-bottom: 1px;
   border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.commentButton:hover {
+  background-color: #3a2c2c;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Contact {
+    padding: 5% 4%;
+  }
+
+  .Contact input,
+  .Contact textarea {
+    width: 100%;
+  }
+
+  .comment-area {
+    flex-direction: column;
+  }
 }
 
 /* Footer */
