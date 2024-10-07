@@ -1,10 +1,10 @@
-import Header from "./Header.jsx"
-import Footer from "./Footer.jsx";
+import Header from "./components/Header.jsx"
+import Footer from "./components/Footer.jsx";
 import "./App.css";
-import Cards from "./Cards.jsx";
+import Cards from "./components/Cards.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from "./Home.jsx";
-import Contact from "./Contact.jsx";
+import Home from "./components/Home.jsx";
+import Contact from "./components/Contact.jsx";
 import Login from "./Login.jsx";
 import Signup from "./SingUp.jsx";
 
