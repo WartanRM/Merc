@@ -12,33 +12,35 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="login-email">Email:</label>
-          <input
-            type="email"
-            id="login-email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="login-password">Password:</label>
-          <input
-            type="password"
-            id="login-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      <p>Dont have an account? <Link to="/signup">Sign up</Link></p>
-    </div>
+    <div className='auth-wrapper'>
+      <div className="auth-container">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="login-email">Email:</label>
+            <input
+              type="email"
+              id="login-email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="login-password">Password:</label>
+            <input
+              type="password"
+              id="login-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p>Dont have an account? <Link to="/signup">Sign up</Link></p>
+      </div>
+      </div>
   );
 };
 

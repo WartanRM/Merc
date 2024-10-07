@@ -16,6 +16,7 @@ const Signup = () => {
   };
 
   return (
+    <div className='auth-wrapper'>
     <div className="auth-container">
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
@@ -51,6 +52,7 @@ const Signup = () => {
         </div>
         <button type="submit">Signup</button>
       </form>
+    </div>
     </div>
   );
 };
