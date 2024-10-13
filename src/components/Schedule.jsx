@@ -23,7 +23,7 @@ const RaceCalendar = () => {
                 const text = await response.text();
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(text, 'application/xml');
-                
+
                 const races = Array.from(xmlDoc.getElementsByTagName('Race')).map(race => {
                     const country = race.getElementsByTagName('Country')[0].textContent;
                     const raceName = race.getElementsByTagName('RaceName')[0].textContent;
@@ -41,14 +41,13 @@ const RaceCalendar = () => {
                 });
 
                 setRaceSchedule(races);
+                localStorage.setItem('raceSchedule', JSON.stringify(races)); // Cache data in localStorage
             } catch (error) {
                 console.error('Error fetching race data:', error);
             }
         };
 
-        // Function to get country code based on country name or race name
         const getCountryCode = (countryName, raceName) => {
-            // Special cases for certain Grand Prix events
             switch (raceName) {
                 case "Miami Grand Prix":
                     return "us"; // Florida state flag
@@ -59,16 +58,21 @@ const RaceCalendar = () => {
                 case "British Grand Prix":
                     return "gb"; // UK flag
                 default:
-                    // Default behavior: look up the country code from the countryCodes object
                     const entry = Object.entries(countryCodes).find(([code, name]) => name === countryName);
                     return entry ? entry[0] : 'xx'; // Fallback 'xx' if no match found
             }
         };
 
-        // Fetch both country codes and race data
-        fetchCountryCodes();
-        fetchRaceData();
-    }, [countryCodes]); // Depend on countryCodes so it updates when fetched
+        // Check if raceSchedule exists in localStorage
+        const cachedRaceSchedule = localStorage.getItem('raceSchedule');
+        if (cachedRaceSchedule) {
+            setRaceSchedule(JSON.parse(cachedRaceSchedule)); // Load from cache if available
+        } else {
+            // Fetch country codes and race data
+            fetchCountryCodes();
+            fetchRaceData();
+        }
+    }, [countryCodes]);
 
     return (
         <div className='calendar'>
