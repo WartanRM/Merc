@@ -1,0 +1,104 @@
+.calendar {
+    padding: 2%;
+    margin: 4% 0%;
+}
+
+.race-calendar-header {
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(199, 147, 95); /* Darker color for header */
+}
+
+.race-calendar-container {
+    display: flex;
+    flex-direction: column; /* Align cards vertically */
+    gap: 20px; /* Space between cards */
+    align-items: center; /* Center align cards */
+}
+
+.race-card {
+    display: flex;
+    align-items: center; 
+    padding: 15px; /* Padding inside the card */
+    width: 100%; /* Full width of the container */
+    max-width: 50%; /* Maximum width for larger screens */
+    height: fit-content; /* Allow height to fit content */
+    background-color: #4d3b3b; /* Card background color */
+    color: rgb(172, 128, 128); /* Text color */
+    border: 1px solid hsl(0, 36%, 18%); /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+    overflow: hidden; /* Hide overflow */
+}
+
+.race-card:hover {
+    transform: scale(1.07); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgb(192, 136, 136); /* Shadow effect on hover */
+}
+
+.race-card-flag {
+    width: 90px; /* Increased width of the flag */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between flag and content */
+}
+
+.race-card-content {
+    flex-grow: 1; /* Allow content to grow and fill available space */
+    display: flex; /* Flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center align content vertically */
+}
+
+.race-card-title {
+    font-size: 1.6rem; /* Title size */
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make title bold */
+    padding-left: 10px; /* Add padding for the title */
+}
+
+.race-card-content p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: rgb(192, 136, 136); /* Gray color for text */
+    padding-left: 10px; /* Add padding for the paragraphs */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .race-calendar-header {
+        font-size: 1.5rem; /* Smaller font size for header */
+    }
+
+    .race-card {
+        max-width: 90%; /* Increase card width for smaller screens */
+        flex-direction: column; /* Stack flag and content vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .race-card-flag {
+        width: 70px; /* Reduce flag size on mobile */
+        margin-bottom: 10px; /* Space between flag and content */
+    }
+
+    .race-card-title {
+        font-size: 1.4rem; /* Smaller title font size */
+    }
+
+    .race-card-content p {
+        font-size: small; /* Smaller text for paragraphs */
+    }
+}
+
+@media (max-width: 480px) {
+    .race-calendar-header {
+        font-size: 1.2rem; /* Further reduce font size for mobile */
+    }
+
+    .race-card-title {
+        font-size: 1.2rem; /* Smaller title font size */
+    }
+
+    .race-card-content p {
+        font-size: x-small; /* Even smaller text for paragraphs */
+    }
+}

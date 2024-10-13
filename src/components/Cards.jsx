@@ -11,6 +11,8 @@ import w09 from "../assets/w09.jpg";
 import w10 from "../assets/w10.jpeg";
 import w11 from "../assets/w11.webp";
 import w12 from "../assets/w12.webp";
+import "./Cards.css";
+
 const imageMapping = {
     'Mercedes MGP W01': w01,
     'Mercedes GP W02': w02,

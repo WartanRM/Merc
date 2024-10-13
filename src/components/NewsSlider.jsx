@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import img1 from '../assets/silverstone.webp'; 
 import img2 from '../assets/w02.jpg'; 
 import img3 from '../assets/w03.jpg'; 
+import './NewsSlider.css';
 
 const newsItems = [
   { id: 1, image: img1, text: 'Hamilton Wins Silverstone 2024' },

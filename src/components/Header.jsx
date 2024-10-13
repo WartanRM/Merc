@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import account from '../assets/iconuser.png';
+import './Header.css';
 
 function Header(){
     return(
@@ -11,7 +12,7 @@ function Header(){
                 <div>
                     <ul>
                         <li><Link to="/">Home</Link></li>
-                        <li><a href="/#about">About</a></li>
+                        <li><Link to="/schedule">Schedule</Link></li>
                         <li><Link to="/gallery">Gallery</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                         <li><Link to="/login"><img className="userIcon" src={account}></img></Link></li>

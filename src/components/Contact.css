@@ -1,0 +1,69 @@
+
+.Contact {
+    min-height: 68vh;
+    width: 100vw;
+    padding: 7% 8%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(199, 147, 95);
+  }
+  
+  .Contact input{
+    border: none;
+    background-color: #4d3b3b;
+    color: rgb(172, 128, 128);
+    width: 12%;
+    margin-bottom: 20px;
+  }
+  .Contact textarea {
+    border: none;
+    background-color: #4d3b3b;
+    color: rgb(172, 128, 128);
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  
+  .comment-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comment-area {
+    display: flex;
+    flex-direction: column; /* Change to column */
+    gap: 10px; /* Space between textarea and button */
+  }
+  
+  .comment {
+    height: 170px;
+  }
+  
+  .commentButton {
+    width: 5%;
+    padding: 5px 10px;
+    background-color: #4d3b3b;
+    color: rgb(199, 147, 95);
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .commentButton:hover {
+    background-color: #3a2c2c;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .Contact {
+      padding: 5% 4%;
+    }
+  
+    .Contact input,
+    .Contact textarea {
+      width: 100%;
+    }
+  
+    .comment-area {
+      flex-direction: column;
+    }
+  }
+  

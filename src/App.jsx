@@ -5,8 +5,9 @@ import Cards from "./components/Cards.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Contact from "./components/Contact.jsx";
-import Login from "./Login.jsx";
-import Signup from "./SingUp.jsx";
+import Login from "./components/Login.jsx";
+import Signup from "./components/SingUp.jsx";
+import Schedule from "./components/Schedule.jsx";
 
 function App() {
   return(
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home /> }/>
           <Route path="/gallery" element={<Cards />} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/schedule" element={<Schedule/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
         </Routes>

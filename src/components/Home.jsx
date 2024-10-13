@@ -1,5 +1,6 @@
 import bgImage from '../bg1.webp';
 import NewsSlider from './NewsSlider.jsx';
+import Banner from './banner.jsx';
 
 function Home(){
     const style={
@@ -15,6 +16,7 @@ function Home(){
         display: 'flex' 
     }
     return(<>
+        <Banner />
             <div style={style}>
                 <div className="Heading">
                     <h1>STILL WE RISE</h1>
