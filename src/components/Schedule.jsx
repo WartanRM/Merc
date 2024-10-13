@@ -19,7 +19,7 @@ const RaceCalendar = () => {
 
         const fetchRaceData = async () => {
             try {
-                const response = await fetch('http://ergast.com/api/f1/current');
+                const response = await fetch('https://ergast.com/api/f1/current');
                 const text = await response.text();
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(text, 'application/xml');
