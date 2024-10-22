@@ -1,0 +1,15 @@
+
+.circuit-details {
+    background-color: #4d3b3b; /* Match the race card color */
+    color: rgb(172, 128, 128);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.circuit-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+}

@@ -1,10 +1,13 @@
 .calendar {
     padding: 2%;
-    margin: 4% 0%;
+    margin: 0% 0%;
 }
-
+.race-calendar-layout {
+    display: flex;
+    justify-content: space-between;
+}
 .race-calendar-header {
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     text-align: center;
     font-size: 2rem;
     color: rgb(199, 147, 95); /* Darker color for header */
@@ -15,8 +18,14 @@
     flex-direction: column; /* Align cards vertically */
     gap: 20px; /* Space between cards */
     align-items: center; /* Center align cards */
+    transition: transform 0.3s ease;
+    width: 100%; /* Default width */
+    
 }
-
+.race-calendar-container.minimized {
+    transform: translateX(-20%); /* Shift the list to the left */
+    width: 65%; /* Adjust width to create more space */
+}
 .race-card {
     display: flex;
     align-items: center; 
@@ -30,8 +39,19 @@
     border-radius: 10px; /* Rounded corners */
     transition: transform 0.2s ease, box-shadow 0.3s ease; /* Transition for hover effect */
     overflow: hidden; /* Hide overflow */
+    position: relative;
+}
+.race-card::after {
+    content: '>'; /* Arrow symbol */
+    position: absolute; /* Position relative to the card */
+    right: 10px; /* Adjust based on your layout */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth transition */
 }
 
+.race-card:hover::after {
+    opacity: 1; /* Show the arrow on hover */
+}
 .race-card:hover {
     transform: scale(1.07); /* Slightly enlarge on hover */
     box-shadow: 0 4px 8px rgb(192, 136, 136); /* Shadow effect on hover */
@@ -61,6 +81,47 @@
     margin: 5px 0; /* Space between paragraphs */
     color: rgb(192, 136, 136); /* Gray color for text */
     padding-left: 10px; /* Add padding for the paragraphs */
+}
+.race-detail-popup {
+    position: fixed; /* Fixes the popup to the viewport */
+    top:10%; /* Aligns it to the top */
+    bottom: 10%;
+    right: 7%; /* Aligns it to the right */
+    width: 45%; /* Width for the detail popup */
+    background-color: #4d3b3b; /* Same background color as race cards */
+    color: rgb(172, 128, 128); /* Same text color as race cards */
+    padding: 20px; /* Padding for the popup */
+    border-left: 1px solid hsl(0, 36%, 18%); /* Border to separate from the list */
+    border-radius: 10px; /* Rounded corners for consistency */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Start at the top */
+    z-index: 10; /* Ensure it appears above other content */
+}
+.race-calendar-header.shifted {
+    transform: translateX(-30%); /* Shift the header to the left */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.close-popup {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: #4d3b3b;
+     /* White text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 30px; /* Width of the button */
+    height: 30px; /* Height of the button */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.close-popup:hover {
+    background-color: black; /* Change color on hover */
 }
 
 /* Responsive Styles */
