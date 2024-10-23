@@ -93,50 +93,34 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-
-/* Headings */
-.Heading {
-  margin-top: 5%;
-  padding-left: 10%;
-  color: rgb(199, 147, 95);
-}
-
-.Heading h1 {
-  font-style: italic;
-  color: rgb(192, 136, 136);
-  font-size: 5.5rem;
-  margin-bottom: 0;
-}
-
-.Heading h3 {
-  margin-top: 3px;
-}
-
-/* Flex Section */
 .second {
-  margin: 20px 5%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Space between the two sections */
+  align-items: flex-start; /* Align items to the top */
+  margin-top:3%;
+  margin-bottom:10%;
 }
 
 .aboutt {
-  flex: 1;
+  flex: 1; /* Give more space to the About section */
+  margin-left: 10%;
+}
+
+.news {
+  flex: 1; /* Keep the NewsSlider smaller */
 }
 
 .aboutt h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-style: italic;
   color: rgb(199, 147, 95);
 }
 
 .aboutt p {
-  color: rgb(192, 136, 136);
+  font-size: 1.15rem;
+  color: rgb(204, 135, 135);
 }
-
 
 
 /* Media Queries */

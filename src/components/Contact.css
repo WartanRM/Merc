@@ -1,3 +1,25 @@
+/* Headings */
+.Heading {
+  height: 90vh; /* Use 80% of the viewport height */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  color: rgb(205, 140, 75);
+  text-align: center; /* Center text alignment */
+}
+
+.Heading h1 {
+  font-style: italic;
+  color: rgb(204, 135, 135);
+  font-size: 6.5rem;
+  margin-bottom: 0;
+}
+
+.Heading h3 {
+  font-size:1.2rem;
+  margin-top: 3px;
+}
 
 .Contact {
     min-height: 40vh;
@@ -8,21 +30,23 @@
     color: rgb(199, 147, 95);
   }
   .Contact h1{
-    
     font-size: larger;
     padding-bottom: 2%;;
+  }
+  .Contact p{
+    color:rgb(204, 135, 135);
   }
   .Contact input{
     border: none;
     background-color: #4d3b3b;
-    color: rgb(172, 128, 128);
+    color: rgb(204, 135, 135);
     width: 12%;
     margin-bottom: 20px;
   }
   .Contact textarea {
     border: none;
     background-color: #4d3b3b;
-    color: rgb(172, 128, 128);
+    color: rgb(204, 135, 135);
     width: 30%;
     margin-bottom: 10px;
   }

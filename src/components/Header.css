@@ -37,11 +37,12 @@ nav {
   }
   
   nav ul li {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
   }
   
   nav ul li a {
-    color: rgb(192, 136, 136);
+    color: rgb(204, 135, 135);
     text-decoration: none;
     padding: 5px;
   }
