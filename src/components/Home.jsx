@@ -1,8 +1,26 @@
+import React, { useState } from 'react';
 import bgImage from '../bg1.webp';
 import NewsSlider from './NewsSlider.jsx';
 import Banner from './banner.jsx';
+import './Contact.css';
 
 function Home(){
+    const [name, SetName] = useState("User");
+    const [email, SetEmail] = useState("example@gmail.com");
+    const [message, SetMessage] = useState("write your comment here...");
+
+    function handleEmailChange(event) {
+        SetEmail(event.target.value);
+      }
+    
+    function handleNameChange(event) {
+        SetName(event.target.value);
+    }
+    
+    function handleCommentChange(event) {
+        SetMessage(event.target.value);
+    }
+
     const style={
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover', 
@@ -37,6 +55,28 @@ function Home(){
                     <NewsSlider/>
                 </div>
             </div>
+            <div className="Contact">
+                <h1>Contact: </h1>
+                    <div>
+                        <p>Name: {name}</p>
+                        <input value={name} onChange={handleNameChange} />
+
+                        <p>Email: {email}</p>
+                        <input value={email} onChange={handleEmailChange} />
+
+                        <div className="comment-wrapper">
+                            <p>Comment: </p>
+                            <textarea value={message} onChange={handleCommentChange} className="comment"></textarea>
+                            <button className="commentButton">Submit</button>
+          
+                        </div>
+                    </div>
+                    <div className="info">
+                        <p>Note: Please share your thoughts and complaints, as we are continuously working towards bettering user experience and services for the community.</p>
+                    </div>
+                
+            </div>
+            
         </>
         
     );

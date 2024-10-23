@@ -1,13 +1,17 @@
 
 .Contact {
-    min-height: 68vh;
+    min-height: 40vh;
     width: 100vw;
     padding: 7% 8%;
     display: flex;
     flex-direction: column;
     color: rgb(199, 147, 95);
   }
-  
+  .Contact h1{
+    
+    font-size: larger;
+    padding-bottom: 2%;;
+  }
   .Contact input{
     border: none;
     background-color: #4d3b3b;

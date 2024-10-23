@@ -118,6 +118,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .aboutt {
