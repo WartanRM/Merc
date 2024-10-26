@@ -1,0 +1,45 @@
+.instruction-text-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: transform 1s ease, opacity 1s ease; /* Transition for fade-out */
+}
+
+.instruction-text {
+    display: flex;
+    flex-wrap: wrap; /* Allow words to wrap */
+}
+
+.word {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 0.5s forwards; /* Animation to fade in */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px; /* Space between button and text */
+}
+
+.fade-out {
+    transform: translateX(-100%); /* Move out to the left */
+    opacity: 0; /* Fade out */
+}

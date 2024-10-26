@@ -53,11 +53,11 @@ function Home() {
                 <div className='second'>
                     <div id='about' className='aboutt'>
                         <h3>About</h3>
-                        <p>At Mercedes-AMG PETRONAS Formula One Team, we take immense pride in our role as a leading
-                        force in motorsport. Since our reformation in 2010, we have clinched multiple Constructors
-                        and Drivers Championships, driven by our commitment to innovation and top-tier performance.
-                        Our cutting-edge technology and talented drivers ensure that we remain at the forefront of
-                        Formula One, embodying the excellence and precision of the Mercedes-Benz brand.</p>
+                        <p>Welcome to the thrilling world of Formula One! Here, we celebrate the speed, the strategy,
+                             and the stunning performances that define the sport. From fierce rivalries to incredible teamwork,
+                              we delve into the heart of racing, showcasing the passion and precision that make F1 unforgettable.
+                               Join us as we explore the adrenaline-fueled action and the remarkable stories behind the drivers and teams.
+                                Buckle up for an exhilarating journey through the world of motorsport!</p>
                     </div>
                     <div className='news'>
                         <NewsSlider />
